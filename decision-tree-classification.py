@@ -80,3 +80,12 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
+
+
+
+import graphviz
+from sklearn.tree import export_graphviz
+from sklearn import tree
+
+from IPython.display import display
+display(graphviz.Source(export_graphviz(classifier)))
